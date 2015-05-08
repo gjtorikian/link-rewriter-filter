@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Garen Torikian"]
   spec.email         = ["gjtorikian@gmail.com"]
 
-  spec.summary       = ""
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "A filter to rewrite links so that files can be viewable on GitHub and a static server"
+  spec.homepage      = "https://github.com/gjtorikian/link-rewriter-filter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
