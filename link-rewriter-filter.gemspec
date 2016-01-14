@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "link-rewriter-filter"
-  spec.version       = '0.0.1'
+  spec.version       = '1.0.0'
   spec.authors       = ["Garen Torikian"]
   spec.email         = ["gjtorikian@gmail.com"]
 
