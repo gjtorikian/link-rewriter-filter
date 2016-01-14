@@ -1,7 +1,6 @@
 require 'html/pipeline'
 
 class LinkRewriterFilter < HTML::Pipeline::MarkdownFilter
-  VERSION = '0.0.1'
   LINK_REGEX = /(.+?)\.md$/
 
   def initialize(text, context = nil, result = nil)

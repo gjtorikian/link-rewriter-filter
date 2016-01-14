@@ -5,7 +5,7 @@ require 'link-rewriter-filter'
 
 Gem::Specification.new do |spec|
   spec.name          = "link-rewriter-filter"
-  spec.version       = LinkRewriterFilter::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Garen Torikian"]
   spec.email         = ["gjtorikian@gmail.com"]
 
