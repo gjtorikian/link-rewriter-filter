@@ -1,11 +1,8 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'link-rewriter-filter'
 
 Gem::Specification.new do |spec|
   spec.name          = "link-rewriter-filter"
-  spec.version       = LinkRewriterFilter::VERSION
+  spec.version       = '0.0.1'
   spec.authors       = ["Garen Torikian"]
   spec.email         = ["gjtorikian@gmail.com"]
 
@@ -18,9 +15,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency 'html-pipeline', "~> 1.0"
+  spec.add_dependency 'html-pipeline', "~> 2.0"
+  spec.add_dependency 'github-markdown', "~> 0.6"
 
-  spec.add_development_dependency "bundler", "~> 1.9"
+  spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'nokogiri', '~> 1.6'
