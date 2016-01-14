@@ -1,23 +1,15 @@
 require 'html/pipeline'
 
-class LinkRewriterFilter < HTML::Pipeline::MarkdownFilter
+class LinkRewriterFilter < HTML::Pipeline::Filter
   LINK_REGEX = /(.+?)\.md$/
 
-  def initialize(text, context = nil, result = nil)
-    @prefix = context[:link_rewriter_prefix] || '/docs/'
-
-    super text, context, result
-  end
-
   def call
-    html = super
-    doc = Nokogiri::HTML(html)
-
-    doc.search("a").each do |a|
-      next if a['href'].nil?
-      a["href"] = "#{@prefix}#{$1}/" if a['href'] =~ LINK_REGEX
+    prefix = context[:link_rewriter_prefix] || '/docs/'
+    doc.search('a').each do |a|
+      next if a['href'].nil? || a['href'].blank?
+      a['href'] = "#{prefix}#{$1}/" if a['href'] =~ LINK_REGEX
     end
 
-    doc.to_s
+    doc
   end
 end
